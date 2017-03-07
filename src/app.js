@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+require('semantic-ui/dist/semantic.css');
+require('common/css/main.scss');
+
+import Router from 'router/router.js'
+
+
 ReactDOM.render(
-    <div>Hello React </div>,
+    <Router/>,
     document.getElementById('root')
 );
 
