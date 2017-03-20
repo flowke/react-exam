@@ -1,19 +1,23 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 import Footer from 'components/footer';
 import Item from 'components/item';
 
+import NewCom from 'components/newCom';
+
 require('common/style/base.css');
 require('common/style/index.css');
 
+// let module = [];
 let module = {
     todosData: []
 };
 
-class App extends React.Component{
+class App extends Component{
 
     constructor(props){
+
         super(props);
 
         this.state = {
@@ -57,6 +61,7 @@ class App extends React.Component{
 
     // 让组件受控
     handleChange(ev){
+
         this.setState({inputVal: ev.target.value});
     }
 
@@ -220,6 +225,8 @@ class App extends React.Component{
                 {itemsBox}
 
                 {footer}
+
+                <NewCom/>
             </div>
         );
 
